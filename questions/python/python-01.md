@@ -50,6 +50,8 @@ Decorator یک تابع است که رفتار یک تابع دیگر را تغ�
 
 از Decorator برای Logging، Authentication و Caching استفاده می‌شود.
 
+<div dir="ltr">
+
 ```python
 def log_decorator(func):
     def wrapper(*args, **kwargs):
@@ -57,6 +59,8 @@ def log_decorator(func):
         return func(*args, **kwargs)
     return wrapper
 ```
+
+</div>
 
 ---
 
@@ -150,10 +154,14 @@ Type Hints نوع متغیرها و توابع را مشخص می‌کنند.
 
 ابزارهایی مانند mypy از این قابلیت برای Static Analysis استفاده می‌کنند.
 
+<div dir="ltr">
+
 ```python
 def get_user(user_id: int) -> dict:
     return {"id": user_id}
 ```
+
+</div>
 
 ---
 
