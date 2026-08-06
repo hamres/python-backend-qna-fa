@@ -1,5 +1,5 @@
 
-# Python Backend Q&A 🇮🇷
+# Python Backend Q&A
 
 مجموعه‌ای فارسی از **سؤال‌ها، مسائل و راه‌حل‌های کاربردی در حوزه 
 Python Backend Development**.
