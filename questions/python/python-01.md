@@ -1,3 +1,6 @@
+
+<div dir="rtl">
+
 # ۳۰ سؤال تخصصی `Python` برای مصاحبه `Backend`
 
 این فایل شامل ۳۰ سؤال سطح بالا در مصاحبه‌های شغلی `Backend` با تمرکز بر `Python` است.
@@ -56,95 +59,95 @@ def log_decorator(func):
 
 ---
 
-### ۴. تفاوت `Generator` و `list` چیست؟
+۴. تفاوت Generator و list چیست؟
 
-**پاسخ:**
+پاسخ:
 
-`Generator` مقادیر را به‌صورت `Lazy` تولید می‌کند.
+Generator مقادیر را به‌صورت Lazy تولید می‌کند.
 
-`list` تمام مقادیر را در `Memory` ذخیره می‌کند.
+list تمام مقادیر را در Memory ذخیره می‌کند.
 
-`Generator` برای داده‌های بزرگ بسیار بهینه‌تر است.
+Generator برای داده‌های بزرگ بسیار بهینه‌تر است.
 
-`Generator` با کلمه کلیدی `yield` تعریف می‌شود.
+Generator با کلمه کلیدی yield تعریف می‌شود.
 
 ---
 
-### ۵. کاربرد `Context Manager` و `with` چیست؟
+۵. کاربرد Context Manager و with چیست؟
 
-**پاسخ:**
+پاسخ:
 
-`Context Manager` مدیریت منابع را بر عهده دارد.
+Context Manager مدیریت منابع را بر عهده دارد.
 
 این کلاس تضمین می‌کند که منابع به‌درستی باز و بسته شوند.
 
-حتی اگر `Exception` رخ دهد، منابع آزاد می‌شوند.
+حتی اگر Exception رخ دهد، منابع آزاد می‌شوند.
 
-معمولاً برای کار با فایل‌ها و `Database Connection` استفاده می‌شود.
+معمولاً برای کار با فایل‌ها و Database Connection استفاده می‌شود.
 
 ---
 
-### ۶. تفاوت `*args` و `**kwargs` چیست؟
+۶. تفاوت *args و **kwargs چیست؟
 
-**پاسخ:**
+پاسخ:
 
-`*args` برای دریافت تعداد نامشخصی `Argument` موقعیتی استفاده می‌شود.
+*args برای دریافت تعداد نامشخصی Argument موقعیتی استفاده می‌شود.
 
-`**kwargs` برای دریافت تعداد نامشخصی `Argument` نام‌دار استفاده می‌شود.
+**kwargs برای دریافت تعداد نامشخصی Argument نام‌دار استفاده می‌شود.
 
 این دو پارامتر انعطاف‌پذیری توابع را افزایش می‌دهند.
 
 ---
 
-### ۷. تفاوت `Mutable` و `Immutable` چیست؟
+۷. تفاوت Mutable و Immutable چیست؟
 
-**پاسخ:**
+پاسخ:
 
-`Mutable` به معنای قابل تغییر پس از ایجاد است.
+Mutable به معنای قابل تغییر پس از ایجاد است.
 
-`list` و `dict` از انواع `Mutable` هستند.
+list و dict از انواع Mutable هستند.
 
-`Immutable` به معنای غیرقابل تغییر پس از ایجاد است.
+Immutable به معنای غیرقابل تغییر پس از ایجاد است.
 
-`tuple` و `str` از انواع `Immutable` هستند.
-
----
-
-### ۸. تفاوت `Deep Copy` و `Shallow Copy` چیست؟
-
-**پاسخ:**
-
-`Shallow Copy` یک کپی سطحی از `Object` ایجاد می‌کند.
-
-در `Shallow Copy` اشیای تودرتو به‌صورت `Reference` به اشتراک گذاشته می‌شوند.
-
-`Deep Copy` یک کپی کامل و مستقل ایجاد می‌کند.
-
-برای `Deep Copy` از ماژول `copy` استفاده می‌شود.
+tuple و str از انواع Immutable هستند.
 
 ---
 
-### ۹. تفاوت `List Comprehension` و `Generator Expression` چیست؟
+۸. تفاوت Deep Copy و Shallow Copy چیست؟
 
-**پاسخ:**
+پاسخ:
 
-`List Comprehension` یک `list` کامل در `Memory` ایجاد می‌کند.
+Shallow Copy یک کپی سطحی از Object ایجاد می‌کند.
 
-`Generator Expression` مقادیر را به‌صورت `Lazy` تولید می‌کند.
+در Shallow Copy اشیای تودرتو به‌صورت Reference به اشتراک گذاشته می‌شوند.
 
-`Generator Expression` برای داده‌های بزرگ بهینه‌تر است.
+Deep Copy یک کپی کامل و مستقل ایجاد می‌کند.
+
+برای Deep Copy از ماژول copy استفاده می‌شود.
 
 ---
 
-### ۱۰. کاربرد `Type Hints` در `Python` چیست؟
+۹. تفاوت List Comprehension و Generator Expression چیست؟
 
-**پاسخ:**
+پاسخ:
 
-`Type Hints` نوع متغیرها و توابع را مشخص می‌کنند.
+List Comprehension یک list کامل در Memory ایجاد می‌کند.
 
-این قابلیت به `Readability` کد کمک می‌کند.
+Generator Expression مقادیر را به‌صورت Lazy تولید می‌کند.
 
-ابزارهایی مانند `mypy` از این قابلیت برای `Static Analysis` استفاده می‌کنند.
+Generator Expression برای داده‌های بزرگ بهینه‌تر است.
+
+---
+
+۱۰. کاربرد Type Hints در Python چیست؟
+
+پاسخ:
+
+Type Hints نوع متغیرها و توابع را مشخص می‌کنند.
+
+این قابلیت به Readability کد کمک می‌کند.
+
+ابزارهایی مانند mypy از این قابلیت برای Static Analysis استفاده می‌کنند.
 
 ```python
 def get_user(user_id: int) -> dict:
@@ -153,284 +156,286 @@ def get_user(user_id: int) -> dict:
 
 ---
 
-## شی‌گرایی و ساختار کلاس
+شی‌گرایی و ساختار کلاس
 
-### ۱۱. تفاوت `classmethod` و `staticmethod` چیست؟
+۱۱. تفاوت classmethod و staticmethod چیست؟
 
-**پاسخ:**
+پاسخ:
 
-`classmethod` به‌عنوان اولین پارامتر `cls` را دریافت می‌کند.
+classmethod به‌عنوان اولین پارامتر cls را دریافت می‌کند.
 
-این متد به کلاس دسترسی دارد و می‌تواند `Instance` ایجاد کند.
+این متد به کلاس دسترسی دارد و می‌تواند Instance ایجاد کند.
 
-`staticmethod` هیچ پارامتر اجباری ندارد.
+staticmethod هیچ پارامتر اجباری ندارد.
 
-این متد نه به کلاس و نه به `Instance` دسترسی دارد.
-
----
-
-### ۱۲. تفاوت `__init__` و `__new__` چیست؟
-
-**پاسخ:**
-
-`__new__` مسئول ایجاد `Instance` جدید است.
-
-این متد قبل از `__init__` فراخوانی می‌شود.
-
-`__init__` مسئول مقداردهی اولیه `Instance` است.
+این متد نه به کلاس و نه به Instance دسترسی دارد.
 
 ---
 
-### ۱۳. کاربرد `Property` در `Python` چیست؟
+۱۲. تفاوت __init__ و __new__ چیست؟
 
-**پاسخ:**
+پاسخ:
 
-`Property` امکان تعریف `Getter`، `Setter` و `Deleter` را فراهم می‌کند.
+__new__ مسئول ایجاد Instance جدید است.
 
-این قابلیت برای کنترل دسترسی به `Attribute`ها استفاده می‌شود.
+این متد قبل از __init__ فراخوانی می‌شود.
 
-`Property` از `Encapsulation` پشتیبانی می‌کند.
-
----
-
-### ۱۴. تفاوت `is` و `==` چیست؟
-
-**پاسخ:**
-
-`==` برای مقایسه مقدار دو `Object` استفاده می‌شود.
-
-`is` برای مقایسه `Reference` دو `Object` استفاده می‌شود.
-
-`is` بررسی می‌کند که آیا دو متغیر به یک `Object` در `Memory` اشاره می‌کنند یا خیر.
+__init__ مسئول مقداردهی اولیه Instance است.
 
 ---
 
-## مدیریت حافظه و `Performance`
+۱۳. کاربرد Property در Python چیست؟
 
-### ۱۵. مدیریت حافظه در `Python` چگونه کار می‌کند؟
+پاسخ:
 
-**پاسخ:**
+Property امکان تعریف Getter، Setter و Deleter را فراهم می‌کند.
 
-`Python` از `Reference Counting` برای مدیریت حافظه استفاده می‌کند.
+این قابلیت برای کنترل دسترسی به Attributeها استفاده می‌شود.
 
-هر `Object` یک شمارنده `Reference` دارد.
-
-وقتی شمارنده به صفر برسد، `Object` از حافظه حذف می‌شود.
+Property از Encapsulation پشتیبانی می‌کند.
 
 ---
 
-### ۱۶. کاربرد `Garbage Collection` در `Python` چیست؟
+۱۴. تفاوت is و == چیست؟
 
-**پاسخ:**
+پاسخ:
 
-`Garbage Collector` مسئول آزادسازی حافظه است.
+== برای مقایسه مقدار دو Object استفاده می‌شود.
 
-این مکانیزم `Reference Cycles` را شناسایی و حذف می‌کند.
+is برای مقایسه Reference دو Object استفاده می‌شود.
 
-ماژول `gc` کنترل دستی این فرایند را امکان‌پذیر می‌کند.
+is بررسی می‌کند که آیا دو متغیر به یک Object در Memory اشاره می‌کنند یا خیر.
 
 ---
 
-### ۱۷. چگونه `Performance` یک برنامه `Python` را بهینه می‌کنید؟
+مدیریت حافظه و Performance
 
-**پاسخ:**
+۱۵. مدیریت حافظه در Python چگونه کار می‌کند؟
 
-ابتدا با `Profiler` گلوگاه‌ها شناسایی می‌شوند.
+پاسخ:
+
+Python از Reference Counting برای مدیریت حافظه استفاده می‌کند.
+
+هر Object یک شمارنده Reference دارد.
+
+وقتی شمارنده به صفر برسد، Object از حافظه حذف می‌شود.
+
+---
+
+۱۶. کاربرد Garbage Collection در Python چیست؟
+
+پاسخ:
+
+Garbage Collector مسئول آزادسازی حافظه است.
+
+این مکانیزم Reference Cycles را شناسایی و حذف می‌کند.
+
+ماژول gc کنترل دستی این فرایند را امکان‌پذیر می‌کند.
+
+---
+
+۱۷. چگونه Performance یک برنامه Python را بهینه می‌کنید؟
+
+پاسخ:
+
+ابتدا با Profiler گلوگاه‌ها شناسایی می‌شوند.
 
 از ساختارهای داده مناسب استفاده می‌شود.
 
-از `Generator` برای داده‌های بزرگ استفاده می‌شود.
+از Generator برای داده‌های بزرگ استفاده می‌شود.
 
-در صورت نیاز از `C Extension` یا `Cython` استفاده می‌شود.
-
----
-
-## `Async` و `Concurrency`
-
-### ۱۸. تفاوت `asyncio` و `threading` چیست؟
-
-**پاسخ:**
-
-`threading` از `OS Threads` استفاده می‌کند.
-
-`asyncio` از `Event Loop` و `Coroutines` استفاده می‌کند.
-
-`asyncio` برای `I/O-Bound` مناسب‌تر است.
-
-`threading` محدودیت `GIL` دارد.
+در صورت نیاز از C Extension یا Cython استفاده می‌شود.
 
 ---
 
-### ۱۹. کاربرد `async` و `await` چیست؟
+Async و Concurrency
 
-**پاسخ:**
+۱۸. تفاوت asyncio و threading چیست؟
 
-`async` یک تابع را به‌عنوان `Coroutine` تعریف می‌کند.
+پاسخ:
 
-`await` اجرای تابع را تا پایان عملیات `Async` متوقف می‌کند.
+threading از OS Threads استفاده می‌کند.
 
-این کلمات کلیدی برای نوشتن کد `Non-Blocking` استفاده می‌شوند.
+asyncio از Event Loop و Coroutines استفاده می‌کند.
 
----
+asyncio برای I/O-Bound مناسب‌تر است.
 
-### ۲۰. `Event Loop` چیست؟
-
-**پاسخ:**
-
-`Event Loop` قلب `asyncio` است.
-
-این حلقه وظایف `Async` را زمان‌بندی و اجرا می‌کند.
-
-`Event Loop` عملیات `I/O` را به‌صورت `Non-Blocking` مدیریت می‌کند.
+threading محدودیت GIL دارد.
 
 ---
 
-## مفاهیم `Web` و `Backend`
+۱۹. کاربرد async و await چیست؟
 
-### ۲۱. تفاوت `WSGI` و `ASGI` چیست؟
+پاسخ:
 
-**پاسخ:**
+async یک تابع را به‌عنوان Coroutine تعریف می‌کند.
 
-`WSGI` یک استاندارد `Synchronous` برای `Python Web` است.
+await اجرای تابع را تا پایان عملیات Async متوقف می‌کند.
 
-`ASGI` یک استاندارد `Asynchronous` برای `Python Web` است.
-
-`ASGI` از `WebSocket` و `HTTP/2` پشتیبانی می‌کند.
+این کلمات کلیدی برای نوشتن کد Non-Blocking استفاده می‌شوند.
 
 ---
 
-### ۲۲. کاربرد `Dependency Injection` چیست؟
+۲۰. Event Loop چیست؟
 
-**پاسخ:**
+پاسخ:
 
-`Dependency Injection` وابستگی‌ها را به‌صورت خارجی تزریق می‌کند.
+Event Loop قلب asyncio است.
 
-این الگو `Coupling` بین اجزا را کاهش می‌دهد.
+این حلقه وظایف Async را زمان‌بندی و اجرا می‌کند.
+
+Event Loop عملیات I/O را به‌صورت Non-Blocking مدیریت می‌کند.
+
+---
+
+مفاهیم Web و Backend
+
+۲۱. تفاوت WSGI و ASGI چیست؟
+
+پاسخ:
+
+WSGI یک استاندارد Synchronous برای Python Web است.
+
+ASGI یک استاندارد Asynchronous برای Python Web است.
+
+ASGI از WebSocket و HTTP/2 پشتیبانی می‌کند.
+
+---
+
+۲۲. کاربرد Dependency Injection چیست؟
+
+پاسخ:
+
+Dependency Injection وابستگی‌ها را به‌صورت خارجی تزریق می‌کند.
+
+این الگو Coupling بین اجزا را کاهش می‌دهد.
 
 تست‌نویسی کد را ساده‌تر می‌کند.
 
 ---
 
-### ۲۳. اصول `SOLID` را توضیح دهید.
+۲۳. اصول SOLID را توضیح دهید.
 
-**پاسخ:**
+پاسخ:
 
-`S` مخفف `Single Responsibility Principle` است.
+S مخفف Single Responsibility Principle است.
 
-`O` مخفف `Open/Closed Principle` است.
+O مخفف Open/Closed Principle است.
 
-`L` مخفف `Liskov Substitution Principle` است.
+L مخفف Liskov Substitution Principle است.
 
-`I` مخفف `Interface Segregation Principle` است.
+I مخفف Interface Segregation Principle است.
 
-`D` مخفف `Dependency Inversion Principle` است.
-
----
-
-## `API Design`
-
-### ۲۴. ویژگی‌های یک `RESTful API` خوب چیست؟
-
-**پاسخ:**
-
-از `HTTP Methods` به‌درستی استفاده می‌شود.
-
-`Stateless` بودن رعایت می‌شود.
-
-از `Status Codes` مناسب استفاده می‌شود.
-
-`Versioning` برای `API` در نظر گرفته می‌شود.
+D مخفف Dependency Inversion Principle است.
 
 ---
 
-### ۲۵. کاربرد `HTTP Methods` مختلف چیست؟
+API Design
 
-**پاسخ:**
+۲۴. ویژگی‌های یک RESTful API خوب چیست؟
 
-`GET` برای دریافت داده استفاده می‌شود.
+پاسخ:
 
-`POST` برای ایجاد داده جدید استفاده می‌شود.
+از HTTP Methods به‌درستی استفاده می‌شود.
 
-`PUT` برای جایگزینی کامل داده استفاده می‌شود.
+Stateless بودن رعایت می‌شود.
 
-`PATCH` برای آپدیت جزئی داده استفاده می‌شود.
+از Status Codes مناسب استفاده می‌شود.
 
-`DELETE` برای حذف داده استفاده می‌شود.
-
----
-
-### ۲۶. `Status Codes` مهم را توضیح دهید.
-
-**پاسخ:**
-
-`200` به معنای موفقیت است.
-
-`201` به معنای ایجاد موفق است.
-
-`400` به معنای خطای کاربر است.
-
-`401` به معنای عدم احراز هویت است.
-
-`403` به معنای عدم دسترسی است.
-
-`404` به معنای یافت نشدن است.
-
-`500` به معنای خطای سرور است.
+Versioning برای API در نظر گرفته می‌شود.
 
 ---
 
-## `Database` و `ORM`
+۲۵. کاربرد HTTP Methods مختلف چیست؟
 
-### ۲۷. کاربرد `Connection Pooling` چیست؟
+پاسخ:
 
-**پاسخ:**
+GET برای دریافت داده استفاده می‌شود.
 
-`Connection Pooling` اتصالات `Database` را مدیریت می‌کند.
+POST برای ایجاد داده جدید استفاده می‌شود.
+
+PUT برای جایگزینی کامل داده استفاده می‌شود.
+
+PATCH برای آپدیت جزئی داده استفاده می‌شود.
+
+DELETE برای حذف داده استفاده می‌شود.
+
+---
+
+۲۶. Status Codes مهم را توضیح دهید.
+
+پاسخ:
+
+200 به معنای موفقیت است.
+
+201 به معنای ایجاد موفق است.
+
+400 به معنای خطای کاربر است.
+
+401 به معنای عدم احراز هویت است.
+
+403 به معنای عدم دسترسی است.
+
+404 به معنای یافت نشدن است.
+
+500 به معنای خطای سرور است.
+
+---
+
+Database و ORM
+
+۲۷. کاربرد Connection Pooling چیست؟
+
+پاسخ:
+
+Connection Pooling اتصالات Database را مدیریت می‌کند.
 
 به‌جای ایجاد اتصال جدید برای هر درخواست، از اتصالات موجود استفاده می‌شود.
 
-این کار `Performance` را به‌شدت افزایش می‌دهد.
+این کار Performance را به‌شدت افزایش می‌دهد.
 
 ---
 
-### ۲۸. تفاوت `ORM` و `Raw SQL` چیست؟
+۲۸. تفاوت ORM و Raw SQL چیست؟
 
-**پاسخ:**
+پاسخ:
 
-`ORM` یک لایه انتزاعی برای کار با `Database` است.
+ORM یک لایه انتزاعی برای کار با Database است.
 
-`ORM` از `SQL Injection` جلوگیری می‌کند.
+ORM از SQL Injection جلوگیری می‌کند.
 
-`Raw SQL` کنترل بیشتری روی کوئری‌ها می‌دهد.
+Raw SQL کنترل بیشتری روی کوئری‌ها می‌دهد.
 
-برای کوئری‌های پیچیده گاهی `Raw SQL` بهینه‌تر است.
+برای کوئری‌های پیچیده گاهی Raw SQL بهینه‌تر است.
 
 ---
 
-## `Security`
+Security
 
-### ۲۹. چگونه از `SQL Injection` جلوگیری می‌کنید؟
+۲۹. چگونه از SQL Injection جلوگیری می‌کنید؟
 
-**پاسخ:**
+پاسخ:
 
-از `Parameterized Queries` استفاده می‌شود.
+از Parameterized Queries استفاده می‌شود.
 
-از `ORM` استفاده می‌شود.
+از ORM استفاده می‌شود.
 
 ورودی کاربر هرگز مستقیماً در کوئری قرار نمی‌گیرد.
 
-`Input Validation` انجام می‌شود.
+Input Validation انجام می‌شود.
 
 ---
 
-### ۳۰. `Authentication` و `Authorization` را توضیح دهید.
+۳۰. Authentication و Authorization را توضیح دهید.
 
-**پاسخ:**
+پاسخ:
 
-`Authentication` هویت کاربر را تأیید می‌کند.
+Authentication هویت کاربر را تأیید می‌کند.
 
 این فرایند مشخص می‌کند که کاربر کیست.
 
-`Authorization` سطح دسترسی کاربر را تعیین می‌کند.
+Authorization سطح دسترسی کاربر را تعیین می‌کند.
 
 این فرایند مشخص می‌کند که کاربر چه کارهایی می‌تواند انجام دهد.
+
+</div>
