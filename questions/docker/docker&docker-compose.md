@@ -554,6 +554,8 @@ volumes:
 
 ## جمع‌بندی نکات کلیدی
 
+<div dir="ltr">
+
 | موضوع | نکته کلیدی |
 |---|---|
 | `Image` | قالب فقط‌خواندنی |
@@ -566,5 +568,7 @@ volumes:
 | `restart` | `always` یا `unless-stopped` |
 | `.env` | مدیریت `Secret`ها |
 | `Security` | بدون `root`، بدون `Secret` در `Image` |
+
+</div>
 
 </div>
