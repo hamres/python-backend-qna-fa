@@ -1,10 +1,12 @@
+<div dir="rtl">
+
 # Python Backend Q&A
 
 مجموعه‌ای فارسی از **سؤال‌ها، مسائل و راه‌حل‌های کاربردی در حوزه توسعه Backend با Python**.
 
 این پروژه با هدف جمع‌آوری و مستندسازی پرسش‌هایی ایجاد شده است که برنامه‌نویسان Backend در مسیر یادگیری، توسعه پروژه‌های واقعی و کار با تکنولوژی‌های مختلف با آن‌ها مواجه می‌شوند.
 
-تمرکز فعلی پروژه روی `Python`، `Django` و `Django REST Framework` است و در ادامه موضوعات مرتبط با `FastAPI` و سایر ابزارها و تکنولوژی‌های Backend نیز به پروژه اضافه خواهند شد.
+تمرکز فعلی پروژه روی Python، Django و Django REST Framework است و در ادامه موضوعات مرتبط با FastAPI و سایر ابزارها و تکنولوژی‌های Backend نیز به پروژه اضافه خواهند شد.
 
 ---
 
@@ -45,9 +47,11 @@
 
 ## 🗂️ ساختار پروژه
 
-تمام سؤال‌ها و پاسخ‌ها در قالب فایل‌های `Markdown` با پسوند `.md` نگهداری می‌شوند.
+تمام سؤال‌ها و پاسخ‌ها در قالب فایل‌های Markdown با پسوند `.md` نگهداری می‌شوند.
 
 ساختار فعلی پروژه:
+
+<div dir="ltr">
 
 ```text
 python-backend-qna-fa/
@@ -73,17 +77,19 @@ python-backend-qna-fa/
     └── architecture/
 ```
 
+</div>
+
 ---
 
 ## 🐍 Python
 
-سؤال‌ها و مسائل مربوط به زبان `Python` و مباحث مورد نیاز برای توسعه Backend.
+سؤال‌ها و مسائل مربوط به زبان Python و مباحث مورد نیاز برای توسعه Backend.
 
 ---
 
 ## 🌱 Django
 
-موضوعات مربوط به `Django`، از جمله:
+موضوعات مربوط به Django، از جمله:
 
 * Models
 * ORM
@@ -100,7 +106,7 @@ python-backend-qna-fa/
 
 ## 🔌 Django REST Framework
 
-موضوعات مرتبط با توسعه API با استفاده از `Django REST Framework`، از جمله:
+موضوعات مرتبط با توسعه API با استفاده از Django REST Framework، از جمله:
 
 * Serializers
 * Views
@@ -118,7 +124,7 @@ python-backend-qna-fa/
 
 ## ⚡ FastAPI
 
-سؤال‌ها، تجربیات و مسائل مربوط به `FastAPI`.
+سؤال‌ها، تجربیات و مسائل مربوط به FastAPI.
 
 این بخش در ادامه توسعه پروژه تکمیل خواهد شد.
 
@@ -160,7 +166,7 @@ python-backend-qna-fa/
 
 ## 🐘 PostgreSQL
 
-موضوعات مرتبط با `PostgreSQL`، از جمله:
+موضوعات مرتبط با PostgreSQL، از جمله:
 
 * Database Design
 * Relationships
@@ -174,7 +180,7 @@ python-backend-qna-fa/
 
 ## ⚡ Redis و Celery
 
-موضوعات مرتبط با `Redis` و `Celery`، از جمله:
+موضوعات مرتبط با Redis و Celery، از جمله:
 
 * Caching
 * Background Tasks
@@ -266,7 +272,7 @@ python-backend-qna-fa/
 * بهبود مستندات
 * ارائه راه‌حل‌های بهتر
 
-هدف این است که دانش و تجربه‌های پراکنده در زمینه `Python Backend Development` به یک مجموعه منظم، قابل استفاده و قابل توسعه تبدیل شود.
+هدف این است که دانش و تجربه‌های پراکنده در زمینه Python Backend Development به یک مجموعه منظم، قابل استفاده و قابل توسعه تبدیل شود.
 
 ---
 
@@ -304,6 +310,8 @@ python-backend-qna-fa/
 
 تمرکز اولیه روی موارد زیر است:
 
+<div dir="ltr">
+
 ```text
 Python
     ↓
@@ -312,7 +320,11 @@ Django
 Django REST Framework
 ```
 
+</div>
+
 و در ادامه موضوعاتی مانند:
+
+<div dir="ltr">
 
 ```text
 FastAPI
@@ -322,6 +334,8 @@ Testing
 Infrastructure
 Architecture
 ```
+
+</div>
 
 نیز به پروژه اضافه خواهند شد.
 
@@ -334,3 +348,5 @@ Architecture
 گاهی یک سؤال ساده که امروز برای یک نفر مطرح می‌شود، می‌تواند فردا مشکل چندین برنامه‌نویس دیگر را حل کند.
 
 **هدف این پروژه یادگیری در کنار یکدیگر، انتقال تجربه و کمک به رشد جامعه Python و Backend فارسی‌زبان است.**
+
+</div>
