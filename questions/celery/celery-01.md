@@ -605,6 +605,8 @@ services:
 
 ## جمع‌بندی نکات کلیدی
 
+<div dir="ltr">
+
 | موضوع | نکته کلیدی |
 |---|---|
 | `Broker` | `RabbitMQ` برای `Production`، `Redis` برای سادگی |
@@ -617,5 +619,7 @@ services:
 | `Docker` | `Worker` و `Beat` در `Container` جداگانه |
 | `Scale` | با `--scale` یا `ReplicaSet` |
 | `Monitor` | `Flower` + `Prometheus` + `Sentry` |
+
+</div>
 
 </div>
