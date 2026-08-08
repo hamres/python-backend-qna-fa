@@ -79,6 +79,13 @@ python-backend-qna-fa/
 
 </div>
 
+
+💡 راهنمای آمادگی برای مصاحبه
+
+برای کمک به افرادی که در مسیر آماده شدن برای مصاحبه‌های Backend هستند، بخشی از تجربیات و نکات مرتبط با مصاحبه‌های فنی نیز در این Repository مستند خواهد شد.
+
+<p align="center"> <img src="questions/images/interview-helps.jpg" alt="راهنمای آمادگی برای مصاحبه Backend" width="800"> </p>
+
 ---
 
 ## 🐍 Python
