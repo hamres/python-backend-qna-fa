@@ -4,12 +4,14 @@ on:
   pull_request:
     types: [closed]
 
+  workflow_dispatch:
+
 permissions:
   contents: write
 
 jobs:
   update-contributors:
-    if: github.event.pull_request.merged == true
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -78,9 +80,9 @@ jobs:
               )
           else:
               contributors_block = (
-                  "<p align=\"center\">"
-                  "هنوز مشارکت‌کننده‌ای ثبت نشده است."
-                  "</p>"
+                  '<p align="center">'
+                  'هنوز مشارکت‌کننده‌ای ثبت نشده است.'
+                  '</p>'
               )
 
           start_marker = "<!-- CONTRIBUTORS:START -->"
