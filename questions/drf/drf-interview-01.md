@@ -9,17 +9,17 @@
 
 <div dir="rtl">
 
-## ۱. فرق ViewSet با APIView با GenericView چیست؟ کِی از کدام استفاده می‌کنی؟
+## سوال ۱. فرق ViewSet با APIView با GenericView چیست؟ کِی از کدام استفاده می‌کنی؟
 
 </div>
 
 <div dir="rtl">
 
-**APIView** پایین‌ترین سطح است. کنترل کامل داری ولی باید هر متد HTTP را دستی بنویسی.
+کلاس APIView پایین‌ترین سطح است. کنترل کامل داری ولی باید هر متد HTTP را دستی بنویسی.
 
-**GenericView** عملیات‌های استاندارد مثل List، Create، Retrieve را آماده دارد. برای Endpointهای ساده و CRUD مناسب است.
+کلاس GenericView عملیات‌های استاندارد مثل List، Create، Retrieve را آماده دارد. برای Endpointهای ساده و CRUD مناسب است.
 
-**ViewSet** مجموعه‌ای از اکشن‌هاست که با Router به URL متصل می‌شود. برای APIهای استاندارد و یکدست بهترین گزینه است.
+کلاس ViewSet مجموعه‌ای از اکشن‌هاست که با Router به URL متصل می‌شود. برای APIهای استاندارد و یکدست بهترین گزینه است.
 
 </div>
 
@@ -40,15 +40,15 @@ class ProductViewSet(viewsets.ModelViewSet):
 
 <div dir="rtl">
 
-## ۲. فرق `request.data` با `request.query_params` چیست؟
+## سوال ۲. فرق `request.data` با `request.query_params` چیست؟
 
 </div>
 
 <div dir="rtl">
 
-`request.data` محتوای Body را برمی‌گرداند. شامل JSON، Form Data و Multipart می‌شود. برای متدهای POST، PUT و PATCH استفاده می‌شود.
+فیلد request.data محتوای Body را برمی‌گرداند. شامل JSON، Form Data و Multipart می‌شود. برای متدهای POST، PUT و PATCH استفاده می‌شود.
 
-`request.query_params` پارامترهای URL را برمی‌گرداند. معادل `request.GET` در Django است.
+فیلد request.query_params پارامترهای URL را برمی‌گرداند. معادل request.GET در Django است.
 
 </div>
 
@@ -71,7 +71,7 @@ body = request.data
 
 <div dir="rtl">
 
-## ۳. چطور یک Permission سفارشی می‌نویسی؟
+## سوال ۳. چطور یک Permission سفارشی می‌نویسی؟
 
 </div>
 
@@ -91,8 +91,7 @@ class IsOwnerOrReadOnly(BasePermission):
 ```
 
 <div dir="rtl">
-
-`has_permission` روی لیست و ساخت Object اجرا می‌شود. `has_object_permission` فقط بعد از واکشی یک Object مشخص صدا زده می‌شود.
+متد has_permission روی لیست و ساخت Object اجرا می‌شود. متد has_object_permission فقط بعد از واکشی یک Object مشخص صدا زده می‌شود.
 
 </div>
 
@@ -100,13 +99,13 @@ class IsOwnerOrReadOnly(BasePermission):
 
 <div dir="rtl">
 
-## ۴. Throttling در DRF چیست و چطور محدودیت درخواست اعمال می‌کنی؟
+## سوال ۴. Throttling در DRF چیست و چطور محدودیت درخواست اعمال می‌کنی؟
 
 </div>
 
 <div dir="rtl">
 
-Throttling یعنی محدود کردن تعداد درخواست‌هایی که یک کاربر یا IP می‌تواند در بازه زمانی مشخص ارسال کند. برای جلوگیری از Abuse و محافظت از سرور استفاده می‌شود.
+منظور از Throttling محدود کردن تعداد درخواست‌هایی است که یک کاربر یا IP می‌تواند در بازه زمانی مشخص ارسال کند. برای جلوگیری از Abuse و محافظت از سرور استفاده می‌شود.
 
 </div>
 
@@ -146,7 +145,7 @@ REST_FRAMEWORK = {
 
 <div dir="rtl">
 
-## ۵. Pagination در DRF چطور کار می‌کند و کدام نوع را ترجیح می‌دهی؟
+## سوال ۵. Pagination در DRF چطور کار می‌کند و کدام نوع را ترجیح می‌دهی؟
 
 </div>
 
@@ -187,13 +186,13 @@ class ProductCursorPagination(CursorPagination):
 
 <div dir="rtl">
 
-## ۶. یک Serializer برای داده‌های تو در تو (Nested) چطور می‌نویسی؟
+## سوال۶. یک Serializer برای داده‌های تو در تو (Nested) چطور می‌نویسی؟
 
 </div>
 
 <div dir="rtl">
 
-Serializer داخلی را به‌عنوان فیلد در Serializer بیرونی تعریف می‌کنیم. برای خواندن ساده است ولی برای نوشتن باید متد `create` یا `update` را دستی مدیریت کنیم.
+ما Serializer داخلی را به‌عنوان فیلد در Serializer بیرونی تعریف می‌کنیم. برای خواندن ساده است ولی برای نوشتن باید متد `create` یا `update` را دستی مدیریت کنیم.
 
 </div>
 
@@ -229,15 +228,15 @@ class UserSerializer(serializers.ModelSerializer):
 
 <div dir="rtl">
 
-## ۷. فرق `ModelSerializer` با `Serializer` معمولی چیست؟
+## سوال ۷. فرق `ModelSerializer` با `Serializer` معمولی چیست؟
 
 </div>
 
 <div dir="rtl">
 
-`ModelSerializer` به‌صورت خودکار فیلدها را از Model می‌سازد و متدهای `create` و `update` پیش‌فرض دارد. برای Mapping مستقیم با Model مناسب است.
+کلاس ModelSerializer به‌صورت خودکار فیلدها را از Model می‌سازد و متدهای create و update پیش‌فرض دارد. برای Mapping مستقیم با Model مناسب است.
 
-`Serializer` معمولی کنترل کامل دستی دارد. وقتی ساختار خروجی با Model یک‌به‌یک نیست یا از چند منبع مختلف داده می‌گیریم، از آن استفاده می‌کنیم.
+کلاس Serializer معمولی کنترل کامل دستی دارد. وقتی ساختار خروجی با Model یک‌به‌یک نیست یا از چند منبع مختلف داده می‌گیریم، از آن استفاده می‌کنیم.
 
 </div>
 
@@ -259,7 +258,7 @@ class ProductDashboardSerializer(serializers.Serializer):
 
 <div dir="rtl">
 
-## ۸. چطور یک فیلد سفارشی در Serializer می‌سازی؟
+## سوال ۸. چطور یک فیلد سفارشی در Serializer می‌سازی؟
 
 </div>
 
@@ -300,15 +299,13 @@ class TomanField(serializers.Field):
 
 <div dir="rtl">
 
-## ۹. Content Negotiation در DRF چیست؟
+## سوال ۹. Content Negotiation در DRF چیست؟
 
 </div>
 
 <div dir="rtl">
 
-Content Negotiation یعنی سرور بر اساس Headerهای درخواست کلاینت تصمیم بگیرد داده را با چه فرمتی برگرداند یا چه فرمتی را بپذیرد.
-
-DRF از طریق `Renderer`ها و `Parser`ها این کار را انجام می‌دهد.
+منظور از Content Negotiation این است که سرور بر اساس Headerهای درخواست کلاینت تصمیم بگیرد داده را با چه فرمتی برگرداند یا چه فرمتی را بپذیرد. چارچوب DRF از طریق Rendererها و Parserها این کار را انجام می‌دهد.
 
 </div>
 
@@ -336,13 +333,13 @@ REST_FRAMEWORK = {
 
 <div dir="rtl">
 
-## ۱۰. Exception Handling در DRF چطور کار می‌کند و چطور Handler سفارشی می‌نویسی؟
+## سوال ۱۰. Exception Handling در DRF چطور کار می‌کند و چطور Handler سفارشی می‌نویسی؟
 
 </div>
 
 <div dir="rtl">
 
-DRF خطاها را با `exception_handler` مدیریت می‌کند و Response استاندارد JSON برمی‌گرداند. برای سفارشی‌سازی، تابع خودمان را جایگزین می‌کنیم.
+چارچوب DRF خطاها را با exception_handler مدیریت می‌کند و Response استاندارد JSON برمی‌گرداند. برای سفارشی‌سازی، تابع خودمان را جایگزین می‌کنیم.
 
 </div>
 
@@ -380,13 +377,13 @@ class InsufficientStock(APIException):
 
 <div dir="rtl">
 
-## ۱۱. چطور API را Versioning می‌کنی؟
+## سوال ۱۱. چطور API را Versioning می‌کنی؟
 
 </div>
 
 <div dir="rtl">
 
-DRF چند روش Versioning دارد. رایج‌ترین آن‌ها URL Path و Namespace است.
+چارچوب DRF چند روش Versioning دارد. رایج‌ترین آن‌ها URL Path و Namespace است.
 
 </div>
 
@@ -424,15 +421,13 @@ def get_serializer_class(self):
 
 <div dir="rtl">
 
-## ۱۲. فرق Authentication Class با Permission Class چیست؟
+## سوال ۱۲. فرق Authentication Class با Permission Class چیست؟
 
 </div>
 
 <div dir="rtl">
 
-Authentication مشخص می‌کند کاربر **کیست**. Permission مشخص می‌کند کاربر **اجازه** انجام این کار را دارد یا نه.
-
-اول Authentication اجرا می‌شود و `request.user` ساخته می‌شود. سپس Permission بررسی می‌شود.
+مکانیزم Authentication مشخص می‌کند کاربر کیست. مکانیزم Permission مشخص می‌کند کاربر اجازه انجام این کار را دارد یا نه. اول Authentication اجرا می‌شود و request.user ساخته می‌شود. سپس Permission بررسی می‌شود.
 
 </div>
 
@@ -452,7 +447,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 
 <div dir="rtl">
 
-## ۱۳. چطور File Upload را در DRF مدیریت می‌کنی؟
+## سوال ۱۳. چطور File Upload را در DRF مدیریت می‌کنی؟
 
 </div>
 
@@ -487,7 +482,7 @@ class UploadView(APIView):
 
 <div dir="rtl">
 
-## ۱۴. Serializer Performance را چطور بهبود می‌دهی؟
+## سوال ۱۴. Serializer Performance را چطور بهبود می‌دهی؟
 
 </div>
 
@@ -522,13 +517,13 @@ class ProductListSerializer(serializers.ModelSerializer):
 
 <div dir="rtl">
 
-## ۱۵. `@action` در ViewSet چیست و کِی استفاده می‌کنی؟
+## سوال ۱۵. `@action` در ViewSet چیست و کِی استفاده می‌کنی؟
 
 </div>
 
 <div dir="rtl">
 
-`@action` برای اضافه کردن Endpointهای سفارشی به ViewSet بدون نیاز به ساخت View جداگانه است.
+دکوراتور @action برای اضافه کردن Endpointهای سفارشی به ViewSet بدون نیاز به ساخت View جداگانه است.
 
 </div>
 
@@ -554,7 +549,7 @@ class OrderViewSet(viewsets.ModelViewSet):
 
 <div dir="rtl">
 
-## ۱۶. چطور Filtering، Search و Ordering را در DRF پیاده‌سازی می‌کنی؟
+## سوال ۱۶. چطور Filtering، Search و Ordering را در DRF پیاده‌سازی می‌کنی؟
 
 </div>
 
@@ -597,7 +592,7 @@ GET /api/products/?category=5&search=laptop&ordering=-price
 
 <div dir="rtl">
 
-## ۱۷. Router در DRF چه کار می‌کند و فرق DefaultRouter با SimpleRouter چیست؟
+## سوال ۱۷. Router در DRF چه کار می‌کند و فرق DefaultRouter با SimpleRouter چیست؟
 
 </div>
 
@@ -639,13 +634,13 @@ DELETE /api/products/{id}/
 
 <div dir="rtl">
 
-## ۱۸. چطور یک Bulk Operation در DRF پیاده‌سازی می‌کنی؟
+## سوال ۱۸. چطور یک Bulk Operation در DRF پیاده‌سازی می‌کنی؟
 
 </div>
 
 <div dir="rtl">
 
-DRF به‌صورت پیش‌فرض Bulk ندارد. باید خودمان مدیریت کنیم. برای Bulk Create از `bulk_create` در لایه Service استفاده می‌کنیم.
+چارچوب DRF به‌صورت پیش‌فرض Bulk ندارد. باید خودمان مدیریت کنیم. برای Bulk Create از bulk_create در لایه Service استفاده می‌کنیم.
 
 </div>
 
@@ -674,7 +669,7 @@ class ProductViewSet(BulkCreateMixin, viewsets.ModelViewSet):
 
 <div dir="rtl">
 
-## ۱۹. چطور خروجی API را Cache می‌کنی؟
+## سوال ۱۹. چطور خروجی API را Cache می‌کنی؟
 
 </div>
 
@@ -700,7 +695,7 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
 
 <div dir="rtl">
 
-Cache Key باید شامل Query String هم باشد تا نتایج فیلترشده اشتباه Cache نشوند. در داده‌های پویا TTL کوتاه در نظر می‌گیریم و Invalidation را مشخص می‌کنیم.
+مقدار Cache Key باید شامل Query String هم باشد تا نتایج فیلترشده اشتباه Cache نشوند. در داده‌های پویا TTL کوتاه در نظر می‌گیریم و Invalidation را مشخص می‌کنیم.
 
 </div>
 
@@ -708,13 +703,13 @@ Cache Key باید شامل Query String هم باشد تا نتایج فیلت�
 
 <div dir="rtl">
 
-## ۲۰. چطور از N+1 در Serializer جلوگیری می‌کنی؟
+## سوال ۲۰. چطور از N+1 در Serializer جلوگیری می‌کنی؟
 
 </div>
 
 <div dir="rtl">
 
-N+1 معمولاً وقتی اتفاق می‌افتد که داخل Serializer به Relation دسترسی داریم ولی QuerySet اصلی آن را Prefetch نکرده است.
+مشکل N+1 معمولاً وقتی اتفاق می‌افتد که داخل Serializer به Relation دسترسی داریم ولی QuerySet اصلی آن را Prefetch نکرده است.
 
 </div>
 
@@ -753,7 +748,7 @@ queryset = Category.objects.prefetch_related("products")
 
 <div dir="rtl">
 
-## ۲۱. چطور یک Endpoint برای Report یا Aggregation می‌سازی؟
+## سوال ۲۱. چطور یک Endpoint برای Report یا Aggregation می‌سازی؟
 
 </div>
 
@@ -793,13 +788,13 @@ class SalesReportView(APIView):
 
 <div dir="rtl">
 
-## ۲۲. چطور از CORS در Django و DRF مدیریت می‌کنی؟
+## سوال ۲۲. چطور از CORS در Django و DRF مدیریت می‌کنی؟
 
 </div>
 
 <div dir="rtl">
 
-CORS مکانیزمی در مرورگر است که مشخص می‌کند چه Originهایی اجازه دسترسی به API را دارند. در Django با پکیج `django-cors-headers` مدیریت می‌شود.
+مکانیزم CORS در مرورگر است که مشخص می‌کند چه Originهایی اجازه دسترسی به API را دارند. در Django با پکیج django-cors-headers مدیریت می‌شود.
 
 </div>
 
@@ -831,17 +826,17 @@ CORS_ALLOW_CREDENTIALS = True
 
 <div dir="rtl">
 
-## ۲۳. فرق `source` با `read_only` و `write_only` در Serializer چیست؟
+## سوال ۲۳. فرق `source` با `read_only` و `write_only` در Serializer چیست؟
 
 </div>
 
 <div dir="rtl">
 
-`source` مشخص می‌کند فیلد از کدام Attribute یا متد Model خوانده شود.
+پارامتر source مشخص می‌کند فیلد از کدام Attribute یا متد Model خوانده شود.
 
-`read_only` یعنی فیلد فقط در خروجی نمایش داده می‌شود و در ورودی نادیده گرفته می‌شود.
+پارامتر read_only یعنی فیلد فقط در خروجی نمایش داده می‌شود و در ورودی نادیده گرفته می‌شود.
 
-`write_only` یعنی فیلد فقط در ورودی پذیرفته می‌شود و در خروجی نمایش داده نمی‌شود. برای فیلدهایی مثل رمز عبور کاربرد دارد.
+پارامتر write_only یعنی فیلد فقط در ورودی پذیرفته می‌شود و در خروجی نمایش داده نمی‌شود. برای فیلدهایی مثل رمز عبور کاربرد دارد.
 
 </div>
 
@@ -859,7 +854,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 <div dir="rtl">
 
-## ۲۴. چطور Authentication را با JWT در DRF پیاده‌سازی می‌کنی؟
+## سوال ۲۴. چطور Authentication را با JWT در DRF پیاده‌سازی می‌کنی؟
 
 </div>
 
@@ -905,7 +900,7 @@ Authorization: Bearer <access_token>
 
 <div dir="rtl">
 
-## ۲۵. اگر بخواهی یک فیلد فقط تحت شرط خاصی در Serializer نمایش داده شود، چه می‌کنی؟
+## سوال ۲۵. اگر بخواهی یک فیلد فقط تحت شرط خاصی در Serializer نمایش داده شود، چه می‌کنی؟
 
 </div>
 
