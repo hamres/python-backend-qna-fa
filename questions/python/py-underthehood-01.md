@@ -1173,8 +1173,6 @@ print(sys.getrefcount(a))  # Output: 3
 
 ---
 
-این مورد را هم می‌توانی با همان ساختار قبلی داخل فایل Markdown قرار بدهی. در انتها هم یک پاسخ کوتاه و مناسب برای بیان در مصاحبه اضافه کردم.
-
 # انواع داده‌های داخلی (Built-in Data Types) در پایتون چه هستند؟
 
 پایتون انواع مختلفی از **Built-in Data Types** را ارائه می‌دهد که هرکدام قابلیت‌ها و کاربردهای متفاوتی برای مدیریت کارآمد حافظه و دست‌کاری داده‌ها دارند. این انواع داده معمولاً بر اساس **Mutable** یا **Immutable** بودن دسته‌بندی می‌شوند.
@@ -1340,8 +1338,6 @@ mutable_buffer = bytearray(raw_data)    # bytearray
 > تفاوت اصلی این است که **Immutable Objects بعد از ایجاد قابل تغییر نیستند**، اما **Mutable Objects را می‌توان بعد از ایجاد تغییر داد**.
 
 ---
-
-این مورد را هم با همان فرمت قبلی، مناسب فایل Markdown و با **خلاصهٔ پاسخ قابل ارائه در مصاحبه** تنظیم کردم:
 
 # مدیریت Exceptionها در پایتون چگونه انجام می‌شود؟
 
@@ -1556,7 +1552,6 @@ if val is None:
 
 ---
 
-این مورد را هم با همان قالب قبلی، با ترجمهٔ وفادار و روان و در انتها با **پاسخ کوتاه مناسب مصاحبه** آماده کردم.
 
 # تابع پایتون چگونه کار می‌کند؟
 
@@ -1663,5 +1658,120 @@ result = closure(3)  # Result: 18.0
 >
 > همچنین Functionها می‌توانند قابلیت‌هایی مثل **Closure** و **Decorator** داشته باشند. Closure باعث می‌شود Function بتواند مقادیر Scope بیرونی خود را حتی بعد از پایان اجرای Function بیرونی حفظ کند.
 
+
+---
+
+
+# لامبدا فانکشنLambda Function چیست و کجا از آن استفاده می‌کنیم؟
+
+یک **Lambda Function** یک **Anonymous Function (تابع ناشناس)** کوچک است که با استفاده از Keyword مربوط به `lambda` تعریف می‌شود.
+
+برخلاف Functionهای معمولی که با `def` تعریف می‌شوند، Lambdaها معمولاً برای عملیات‌های کوتاه و موقتی استفاده می‌شوند؛ یعنی زمانی که برای منطقی که قرار است اجرا شود، داشتن یک نام رسمی ضروری نیست.
+
+## ویژگی‌های اصلی (Distinctive Features)
+
+### ناشناس بودن (Anonymity)
+
+Lambdaها به‌صورت پیش‌فرض به یک Name متصل نمی‌شوند و به همین دلیل برای کارهای Utility کوتاه و یک‌باره (**One-off**) در یک Scope محدود، مانند داخل یک Function Call، مناسب هستند.
+
+### داشتن یک Expression (Single Expression Body)
+
+بدنهٔ Lambda فقط می‌تواند شامل **یک Expression** باشد.
+
+این موضوع باعث کوتاه و ساده شدن کد می‌شود، اما امکان استفاده از چند Statement، Assignment یا Control Flowهای پیچیده مانند Loop را در بدنهٔ Function فراهم نمی‌کند.
+
+### بازگشت ضمنی مقدار (Implicit Return)
+
+در Lambda نیازی به استفاده از `return` به‌صورت صریح وجود ندارد. نتیجهٔ Expression به‌صورت خودکار برگردانده می‌شود.
+
+Syntax کلی Lambda به شکل زیر است:
+
+```python
+lambda arguments: expression
+```
+
+### کوتاه بودن کد (Conciseness)
+
+در واقع Lambdaها امکان تعریف Function را در همان محل استفاده فراهم می‌کنند و در نتیجه برای Transformationها یا Predicateهای ساده، نیاز به ساختن یک Function کامل با `def` کاهش پیدا می‌کند.
+
+## کاربردهای رایج (Common Use Cases)
+
+### استفاده با Map، Filter و Reduce
+
+تابع ها یا Functionهایی مانند `map()` و `filter()` معمولاً یک Lambda را به‌عنوان Argument دریافت می‌کنند تا Transformation یا Predicate موردنظر را همان لحظه تعریف کنند.
+
+```python
+numbers = [1, 2, 3, 4]
+
+# Squaring elements in a list
+squared = list(map(lambda x: x**2, numbers))
+
+# [1, 4, 9, 16]
+```
+
+برای استفاده از `reduce()` باید آن را از Module مربوط به `functools` Import کرد.
+
+### مرتب‌سازی و Min/Max
+
+لامبدا Lambdaها معمولاً به‌عنوان **Custom Key** برای مرتب‌سازی Data Structureهای پیچیده استفاده می‌شوند.
+
+این روش برای مرتب کردن Dictionaryها یا Objectها بر اساس یک Attribute یا Field خاص بسیار کاربردی است.
+
+```python
+data = [
+    {'name': 'Alice', 'age': 30},
+    {'name': 'Bob', 'age': 25}
+]
+
+# Sort by age attribute
+sorted_data = sorted(data, key=lambda x: x['age'])
+```
+
+در این مثال، داده‌ها بر اساس مقدار `age` مرتب می‌شوند.
+
+### Callbackها و Closureها
+
+لامبدا Lambdaها می‌توانند در GUI Frameworkها یا برنامه‌نویسی Asynchronous به‌عنوان **Callback** استفاده شوند؛ یعنی Function به‌عنوان Argument ارسال می‌شود تا بعد از رخ دادن یک Event اجرا شود.
+
+همچنین می‌توان از Lambdaها به‌عنوان مقدار بازگشتی Higher-Order Functionها استفاده کرد تا بدون نام‌گذاری هر Function واسط، رفتارهای تخصصی ایجاد شوند.
+
+## محدودیت‌های مهم (Notable Limitations)
+
+### خوانایی و PEP 8
+
+زمانی که منطق Function بلافاصله قابل فهم نباشد، استفاده از Functionهای نام‌دار (**Named Functions**) ترجیح داده می‌شود.
+
+اما **PEP 8** به‌طور مشخص استفاده از Lambda برای اتصال آن به یک Identifier را توصیه نمی‌کند؛ برای مثال:
+
+```python
+f = lambda x: x + 1
+```
+
+در چنین شرایطی بهتر است از `def` استفاده شود:
+
+```python
+def f(x):
+    return x + 1
+```
+
+دلیل این است که اختصاص دادن یک Name به Lambda عملاً مزیت اصلی Anonymous بودن آن را از بین می‌برد.
+
+### مستندسازی و Debugging
+
+لامبد Lambdaها نمی‌توانند **Docstring** داشته باشند و به همین دلیل مستندسازی آن‌ها دشوارتر است.
+
+همچنین چون Anonymous هستند، در Traceback معمولاً با نام `<lambda>` نمایش داده می‌شوند و این موضوع می‌تواند Debugging را نسبت به Named Functionها دشوارتر کند.
+
+---
+
+## خلاصهٔ پاسخ برای مصاحبه
+
+> لامبدا فانکشن **Lambda Function** یک Anonymous Function کوتاه است که با Keyword مربوط به `lambda` تعریف می‌شود و فقط یک Expression دارد. مقدار Expression نیز به‌صورت خودکار Return می‌شود.
+>
+> معمولاً از Lambda برای عملیات‌های کوتاه و یک‌باره استفاده می‌کنیم؛ مثلاً همراه `map()`، `filter()` یا برای مشخص کردن `key` در `sorted()`.
+>
+> مزیت اصلی Lambda کوتاه و Inline بودن آن است، اما اگر منطق پیچیده یا نیاز به مستندسازی داشته باشیم، بهتر است از Function معمولی با `def` استفاده کنیم.
+>
+> همچنین طبق **PEP 8** بهتر است Lambda را به یک Name مثل `f = lambda x: x + 1` Bind نکنیم و در چنین شرایطی از `def` استفاده کنیم.
 
 </div>
