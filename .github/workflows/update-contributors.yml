@@ -1,0 +1,128 @@
+name: Update Contributors
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+
+jobs:
+  update-contributors:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update contributors
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          repository = os.environ["REPOSITORY"]
+          token = os.environ["GH_TOKEN"]
+
+          url = (
+              f"https://api.github.com/repos/"
+              f"{repository}/contributors?per_page=100"
+          )
+
+          request = urllib.request.Request(
+              url,
+              headers={
+                  "Accept": "application/vnd.github+json",
+                  "Authorization": f"Bearer {token}",
+                  "X-GitHub-Api-Version": "2026-03-10",
+              },
+          )
+
+          with urllib.request.urlopen(request) as response:
+              contributors = json.load(response)
+
+          contributors = [
+              contributor
+              for contributor in contributors
+              if contributor.get("type") == "User"
+              and contributor.get("login") != "github-actions[bot]"
+          ]
+
+          items = []
+
+          for contributor in contributors:
+              login = contributor["login"]
+              profile = contributor["html_url"]
+              avatar = contributor["avatar_url"]
+
+              item = (
+                  f'<a href="{profile}">'
+                  f'<img src="{avatar}" width="80" '
+                  f'alt="{login}"><br>'
+                  f'<sub><b>{login}</b></sub>'
+                  f'</a>'
+              )
+
+              items.append(item)
+
+          if items:
+              contributors_block = (
+                  '<p align="center">\n'
+                  + "\n".join(items)
+                  + "\n</p>"
+              )
+          else:
+              contributors_block = (
+                  "<p align=\"center\">"
+                  "هنوز مشارکت‌کننده‌ای ثبت نشده است."
+                  "</p>"
+              )
+
+          start_marker = "<!-- CONTRIBUTORS:START -->"
+          end_marker = "<!-- CONTRIBUTORS:END -->"
+
+          with open("README.md", "r", encoding="utf-8") as file:
+              readme = file.read()
+
+          start = readme.index(start_marker) + len(start_marker)
+          end = readme.index(end_marker)
+
+          new_section = (
+              "\n\n"
+              "### 🙏 دوستان و مشارکت‌کنندگان\n\n"
+              "از تمام افرادی که با سؤال، پاسخ، تجربه، اصلاح محتوا "
+              "یا مشارکت فنی به توسعه این پروژه کمک می‌کنند، "
+              "صمیمانه سپاسگزاریم.\n\n"
+              + contributors_block
+              + "\n\n"
+          )
+
+          readme = (
+              readme[:start]
+              + new_section
+              + readme[end:]
+          )
+
+          with open("README.md", "w", encoding="utf-8") as file:
+              file.write(readme)
+          PY
+
+      - name: Commit contributors
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "docs: update contributors"
+          git push
