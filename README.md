@@ -303,7 +303,14 @@ python-backend-qna-fa/
 
 <!-- CONTRIBUTORS:START -->
 
-### 🙏 مشارکت‌کنندگان
+### 🙏 دوستان و مشارکت‌کنندگان
+
+از تمام افرادی که با سؤال، پاسخ، تجربه، اصلاح محتوا یا مشارکت فنی به توسعه این پروژه کمک می‌کنند، صمیمانه سپاسگزاریم.
+
+<p align="center">
+<a href="https://github.com/moeinrezai"><img src="https://avatars.githubusercontent.com/u/164065593?v=4" width="80" alt="moeinrezai"><br><sub><b>moeinrezai</b></sub></a>
+<a href="https://github.com/hamres"><img src="https://avatars.githubusercontent.com/u/314216067?v=4" width="80" alt="hamres"><br><sub><b>hamres</b></sub></a>
+</p>
 
 <!-- CONTRIBUTORS:END -->
 
